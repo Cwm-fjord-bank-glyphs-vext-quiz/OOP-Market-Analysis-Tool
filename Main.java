@@ -20,7 +20,6 @@ public class Main {
         System.out.println("Enter the ending date range (YYYY-MM-DD)");
         String endDate = scanner.nextLine();
 
-        // ---- DATE FORMAT CHECK ----
         if (!startDate.matches("\\d{4}-\\d{2}-\\d{2}") ||
                 !endDate.matches("\\d{4}-\\d{2}-\\d{2}")) {
 
@@ -28,7 +27,6 @@ public class Main {
             return;
         }
 
-        // ---- DATE ORDER CHECK ----
         if (startDate.compareTo(endDate) > 0) {
             System.out.println("Error: Start date cannot be after end date.");
             return;
@@ -36,7 +34,6 @@ public class Main {
 
         ArrayList<String> data = ReadFile.read(ticker, startDate, endDate);
 
-        // ---- EMPTY DATA CHECK ----
         if (data.isEmpty()) {
             System.out.println("No data found for this ticker or date range.");
             return;
