@@ -7,17 +7,7 @@ Based on the Market Data folder attached, pick any of the ticker names on the fi
 Finally, the Market Assistant will output the different metrics. These include highest closing price, lowest closing price, average closing price, average closing price, percentage change over selected period, average trading volume, best trading day (% increase), worst trading day (% decrease).
 
 ## Example output: 
-Ticker: GOOGL
-Period: 2025-01-02 - 2025-02-28
 
-Highest Closing Price: 206.38
-Lowest Closing Price: 168.50
-Average Closing Price: 189.97
-Price Change: -10.11%
-Average Trading Volume: 28,970,262
-
-Best Trading Day: 3.11%
-Worst Trading Day: -7.29%
 
 ## Project Structure:
 ### Main.java
