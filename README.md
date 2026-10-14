@@ -7,7 +7,7 @@ Based on the Market Data folder attached, pick any of the ticker names on the fi
 Finally, the Market Assistant will output the different metrics. These include highest closing price, lowest closing price, average closing price, average closing price, percentage change over selected period, average trading volume, best trading day (% increase), worst trading day (% decrease).
 
 ## Example output: 
-![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-10-14%20115611.png
+![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-10-14%20115611.png)
 
 ## Project Structure:
 ### Main.java
