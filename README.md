@@ -30,3 +30,11 @@ Receives Array List from ReadFile.java, and organizes the data into specific col
 Preforms calculations using the cleaned-up data received from CleanUp.java 
 ### Formater.java
 Formats the data clearly recived from calculations.java, and outputs the relevant information 
+
+## Diagram
+
+## Development Efforts
+### Sandra
+Responsible for development of calculations.java, and Formatter.java, created the UML diagram. Furthermore, contributed to debugging and testing, and assisted with implementing error handling. 
+### Xavier
+Responsible for development of Main.java, ReadFile.java, and cleanUp.java, created README.md and contributed to the final testing before commitment. 
