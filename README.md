@@ -22,6 +22,8 @@ Preforms calculations using the cleaned-up data received from CleanUp.java
 Formats the data clearly recived from calculations.java, and outputs the relevant information 
 
 ## Diagram
+<img width="892" height="395" alt="image" src="https://github.com/user-attachments/assets/aebafae3-c1a8-43ee-912c-465b7fa0ca5e" />
+
 
 ## Development Efforts
 ### Sandra
