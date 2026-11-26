@@ -43,4 +43,4 @@ Milestone 2: Responsible for the updating READ.md and creating new UML Class Dia
 ### Xavier
 Milestone 1: Responsible for development of Main.java, ReadFile.java, and cleanUp.java, created README.md and contributed to the final testing before commitment. 
 
-Milestone 2: Responsible for creating Validation.java, Filter.java and Watchlist.java. Lastly assisted in reworking files to fix low coupling issue.
+Milestone 2: Responsible for creating Validation.java, Filter.java and Watchlist.java. Lastly assisted in reworking files to improve cohesion and coupling.
