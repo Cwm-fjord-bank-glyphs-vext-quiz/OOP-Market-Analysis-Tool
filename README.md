@@ -14,21 +14,58 @@ Finally, the Market Assistant will output the different metrics. These include h
 
 ## Project Structure:
 ### Main.java
-Runs the menu and user input
-Important code: loop control, input, cleanup
-### ReadFile.java
-Reads the stock csv files and turn the rows into PriceRecord objects
-Important code: file path, BufferedReader, FIleReader, readLine(), parsing, date filtering
-### Filter.java
-Narrows a list of records down to one product
-Important code: ArrayList
-### Calculations.java
-Computes statistics from a list of price records
-Important code: best & worst day, for loop, min & max pattern, percent record formula
-### Formater.java
-Handles all the printing and table formatting
-Important code: printf, casting
+Acts as the entry point of the application and manages the user interaction loop. This class displays the menu, validates user input, processes menu selections, and coordinates the flow of data between the other classes.
 
+**Responsibilities**
+- Display menu options
+- Accept and validate user input
+- Control program execution flow
+- Call the appropriate methods from other classes
+- Handle program startup and shutdown
+
+### ReadFile.java
+Loads stock market data from CSV files and converts each row into a `PriceRecord` object. This class is responsible for reading files, parsing data, and filtering records based on user-specified date ranges.
+
+**Responsibilities**
+- Open and read CSV files
+- Parse stock market data
+- Create `PriceRecord` objects
+- Filter data by date range
+- Store records in collections for processing
+
+### Filter.java
+Provides methods for narrowing large datasets into smaller, more relevant collections. This includes filtering records by stock ticker, date range, or other user-selected criteria.
+
+**Responsibilities**
+- Filter records by product/ticker symbol
+- Create focused datasets for analysis
+- Reduce processing overhead by removing unnecessary records
+
+### Calculations.java
+Performs all statistical analysis on stock data. This class calculates performance metrics and identifies significant trends within a selected dataset.
+
+**Responsibilities**
+- Calculate percentage changes
+- Identify best-performing days
+- Identify worst-performing days
+- Find minimum and maximum prices
+- Generate summary statistics
+
+**Example Calculations**
+- Highest closing price
+- Lowest closing price
+- Greatest daily gain
+- Greatest daily loss
+- Overall percentage return
+
+### Formatter.java
+Handles all console output and presentation of results. Separating formatting logic from business logic makes the program easier to maintain and improves readability.
+
+**Responsibilities**
+- Format statistical results
+- Print tables and summaries
+- Display user-friendly reports
+- Control output appearance
 
 ## Diagram
 <img width="360" height="378" alt="image" src="https://github.com/user-attachments/assets/105db74f-7b8e-4e6e-ba8d-9ef5cf0d4c0f" />
