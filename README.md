@@ -13,59 +13,249 @@ Finally, the Market Assistant will output the different metrics. These include h
 ![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-11-25%20221312.png)
 
 ## Project Structure:
-### Main.java
-Acts as the entry point of the application and manages the user interaction loop. This class displays the menu, validates user input, processes menu selections, and coordinates the flow of data between the other classes.
+## Main.java
 
-**Responsibilities**
+Acts as the entry point of the application and manages the menu-driven user interface.
+
+### Responsibilities
+
 - Display menu options
-- Accept and validate user input
-- Control program execution flow
-- Call the appropriate methods from other classes
-- Handle program startup and shutdown
+- Process user selections
+- Coordinate communication between classes
+- Manage program execution flow
+- Handle application startup and shutdown
+- Maintain the application loop
 
-### ReadFile.java
-Loads stock market data from CSV files and converts each row into a `PriceRecord` object. This class is responsible for reading files, parsing data, and filtering records based on user-specified date ranges.
+---
 
-**Responsibilities**
-- Open and read CSV files
-- Parse stock market data
-- Create `PriceRecord` objects
-- Filter data by date range
-- Store records in collections for processing
+## PriceRecord.java
 
-### Filter.java
-Provides methods for narrowing large datasets into smaller, more relevant collections. This includes filtering records by stock ticker, date range, or other user-selected criteria.
+Represents a single trading day of stock market data.
 
-**Responsibilities**
-- Filter records by product/ticker symbol
-- Create focused datasets for analysis
-- Reduce processing overhead by removing unnecessary records
+### Attributes
 
-### Calculations.java
-Performs all statistical analysis on stock data. This class calculates performance metrics and identifies significant trends within a selected dataset.
+- Date
+- Opening Price
+- High Price
+- Low Price
+- Closing Price
+- Trading Volume
 
-**Responsibilities**
-- Calculate percentage changes
-- Identify best-performing days
-- Identify worst-performing days
-- Find minimum and maximum prices
-- Generate summary statistics
+### Methods
 
-**Example Calculations**
-- Highest closing price
-- Lowest closing price
-- Greatest daily gain
-- Greatest daily loss
-- Overall percentage return
+```java
+getDate()
+getOpen()
+getHigh()
+getLow()
+getClose()
+getVolume()
+```
+---
 
-### Formatter.java
-Handles all console output and presentation of results. Separating formatting logic from business logic makes the program easier to maintain and improves readability.
+## ReadFile.java
 
-**Responsibilities**
-- Format statistical results
-- Print tables and summaries
-- Display user-friendly reports
-- Control output appearance
+Responsible for reading stock market CSV files and converting each record into PriceRecord objects.
+
+### Responsibilities
+
+- Open stock data files
+- Parse CSV records
+- Create PriceRecord objects
+- Retrieve historical records
+- Filter records by date range
+- Validate ticker symbols
+- Determine earliest and latest available dates
+
+### Methods
+
+```java
+read()
+tickerExists()
+getEarliestDate()
+getLatestDate()
+```
+
+---
+
+## Validation.java
+
+Provides reusable validation methods used throughout the application.
+
+### Responsibilities
+
+- Validate integer input
+- Validate double input
+- Validate long input
+- Validate ticker symbols
+- Validate date formatting
+
+### Methods
+
+```java
+getValidTicker()
+getValidInt()
+getValidDouble()
+getValidLong()
+validDate()
+```
+
+---
+
+## Watchlist.java
+
+Manages the user's personal watchlist.
+
+### Responsibilities
+
+- Add stocks to the watchlist
+- Remove stocks from the watchlist
+- Check if a stock exists
+- Check if the watchlist is empty
+- Display watchlist contents
+
+### Methods
+
+```java
+addStock()
+removeStock()
+stockExists()
+isEmpty()
+getStocks()
+```
+
+---
+
+## Filter.java
+
+Provides methods for filtering collections of stock market records.
+
+### Responsibilities
+
+- Filter by minimum closing price
+- Filter by minimum trading volume
+- Return filtered collections for analysis
+
+### Methods
+
+```java
+filterByPrice()
+filterByVolume()
+```
+
+---
+
+## Calculations.java
+
+Performs all statistical analysis and performance calculations.
+
+### Responsibilities
+
+- Calculate highest closing price
+- Calculate lowest closing price
+- Calculate average closing price
+- Calculate latest available closing price
+- Calculate overall return
+- Calculate average trading volume
+- Calculate largest daily increase
+- Calculate largest daily decrease
+
+### Methods
+
+```java
+highestClose()
+lowestClose()
+averageClose()
+latestClose()
+percentChange()
+averageTradingVolume()
+percentageIncrease()
+percentageDecrease()
+```
+
+### Example Calculations
+
+- Highest Closing Price
+- Lowest Closing Price
+- Average Closing Price
+- Period Return
+- Latest Available Price
+- Average Trading Volume
+- Best Trading Day
+- Worst Trading Day
+
+---
+
+## Formatter.java
+
+Handles all user output and presentation of information.
+
+### Responsibilities
+
+- Display stock analysis
+- Display stock comparisons
+- Display watchlists
+- Display filtered datasets
+- Format console output
+
+### Methods
+
+```java
+DisplayWatchList()
+CompareTickers()
+displayFilteredData()
+```
+
+### Features
+
+- Historical stock analysis reports
+- Watchlist reports
+- Stock comparison tables
+- Filtered market data tables
+
+---
+
+# Features Implemented
+
+## Historical Stock Analysis
+
+- Highest Closing Price
+- Lowest Closing Price
+- Average Closing Price
+- Percentage Return
+- Average Trading Volume
+- Best Trading Day
+- Worst Trading Day
+
+## Watchlist Management
+
+- Add Stocks
+- Remove Stocks
+- View Watchlist
+
+## Stock Comparison
+
+- Period Return
+- Average Price
+- Highest Price
+- Lowest Price
+- Average Volume
+
+## Filtering
+
+- Filter by Price
+- Filter by Trading Volume
+- Filter by Date Range
+
+## Input Validation
+
+- Ticker Validation
+- Date Validation
+- Integer Validation
+- Double Validation
+- Long Validation
+
+---
 
 ## Diagram
 <img width="360" height="378" alt="image" src="https://github.com/user-attachments/assets/105db74f-7b8e-4e6e-ba8d-9ef5cf0d4c0f" />
