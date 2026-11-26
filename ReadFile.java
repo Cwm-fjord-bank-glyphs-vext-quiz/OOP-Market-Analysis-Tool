@@ -49,4 +49,80 @@ public class ReadFile {
         }
         return csvData;
     }
+    public static boolean tickerExists(String ticker) {
+
+        String path =
+                "data/Market data_2025/" +
+                        ticker + "_2025.csv";
+
+        File file = new File(path);
+
+        return file.exists();
+    }
+    public static String getEarliestDate(String ticker) {
+
+        try {
+
+            String path =
+                    "data/Market data_2025/" +
+                            ticker + "_2025.csv";
+
+            BufferedReader reader =
+                    new BufferedReader(
+                            new FileReader(path));
+
+            reader.readLine(); // skip header
+
+            String firstLine = reader.readLine();
+
+            reader.close();
+
+            if(firstLine != null) {
+
+                return firstLine.split(",")[0];
+            }
+
+        } catch(Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return "";
+    }
+    public static String getLatestDate(String ticker) {
+
+        try {
+
+            String path =
+                    "data/Market data_2025/" +
+                            ticker + "_2025.csv";
+
+            BufferedReader reader =
+                    new BufferedReader(
+                            new FileReader(path));
+
+            reader.readLine();
+
+            String line;
+            String lastLine = "";
+
+            while((line = reader.readLine()) != null) {
+
+                lastLine = line;
+            }
+
+            reader.close();
+
+            if(!lastLine.isEmpty()) {
+
+                return lastLine.split(",")[0];
+            }
+
+        } catch(Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return "";
+    }
 }
