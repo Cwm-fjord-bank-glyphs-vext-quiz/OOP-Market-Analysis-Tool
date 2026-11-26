@@ -8,6 +8,9 @@ Finally, the Market Assistant will output the different metrics. These include h
 
 ## Example output: 
 ![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-10-14%20115611.png)
+![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-11-25%20221206.png)
+![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-11-25%20221244.png)
+![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-11-25%20221312.png)
 
 ## Project Structure:
 ### Main.java
