@@ -2,9 +2,10 @@
 ## Description on how to use project
 The project analyzes the stock market data collected in CSV files. The program outputs various metrics, relevant to the date range selected.
 
-Based on the Market Data folder attached, pick any of the ticker names on the files. Input the ticker name following the same syntax as on the file. Then specify a date range using the dates in the file, make sure to follow a YYYY-MM-DD format. The program is design to check for a correct date format, the existence of the data, that the start date is before the end date. 
+Based on the Market Data folder attached, pick any of the ticker names on the files. Input the ticker name following the same syntax as on the file. Then specify a date range using the dates in the file, make sure to follow a YYYY-MM-DD format. The program is design to check for a correct date format, the existence of the data, confirmation of validity of data user input, that the start date is before the end date. Filter.java removes CleanUp.java as it captures and narrows data down based upon user input to produce a desired output. Validation.java prevents program crashing by attempting to make user correct an invalid input. Watchlist.java creates different file to capture all the data user inputs for their stock watchlist.
 
-Finally, the Market Assistant will output the different metrics. These include highest closing price, lowest closing price, average closing price, average closing price, percentage change over selected period, average trading volume, best trading day (% increase), worst trading day (% decrease).
+Finally, the Market Assistant will output the different metrics. These include highest closing price, lowest closing price, average closing price, average closing price, percentage change over selected period, average trading volume, best trading day (% increase), worst trading day (% decrease). It produces a high coupling by splitting different function up to their designated file to ensure code organization and clarity.
+
 
 ## Example output: 
 ![image](https://github.com/Cwm-fjord-bank-glyphs-vext-quiz/OOP-Market-Analysis-Tool/blob/main/Screenshot%202026-10-14%20115611.png)
